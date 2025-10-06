@@ -1,0 +1,348 @@
+first_name,last_name,dob,postcode,date_of_notification,place_of_birth,age_at_diagnosis,risk_of_exposure,testing_history,acquisition,stage_of_infection,pathogen,record_type,internal_id
+ED,SH,11/04/1971,2103,16/09/2023,Overseas,50-59,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN1
+HE,EA,16/03/1956,2071,02/11/2021,Overseas,60+,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN2
+DE,TA,07/06/1956,2071,16/07/2023,Overseas,60+,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN3
+LO,SA,02/01/1974,2220,09/08/2020,Overseas,40-49,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN4
+WO,JO,01/07/1965,2008,24/04/2019,Australia,50-59,HET,Neg. or ind. ≤12 months,Unknown,CD4 350-499,HIV,notification,PPN5
+MU,NI,03/05/1951,2261,10/05/2021,Overseas,60+,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN6
+LO,AL,16/12/1969,2187,04/04/2021,Overseas,50-59,MSM,Never tested before,Australia,Early,HIV,notification,PPN7
+BR,HA,10/09/1960,2136,25/07/2021,Overseas,60+,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN8
+LA,AU,26/07/2008,2190,20/05/2021,Australia,10-19,HET,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN9
+GU,KA,27/06/2006,2192,11/08/2023,Overseas,10-19,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN10
+DU,MA,07/10/1994,2006,06/06/2022,Overseas,20-29,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN11
+TH,AL,18/05/2009,2080,21/05/2022,Overseas,10-19,MSM,Never tested before,Australia,CD4 350-499,HIV,notification,PPN12
+PE,MI,05/08/1951,2166,08/09/2022,Australia,60+,HET,Never tested before,Australia,Early,HIV,notification,PPN13
+SA,MA,22/03/1979,2115,20/05/2021,Australia,40-49,MSM,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN14
+DY,SA,06/11/1968,2164,08/03/2019,Australia,50-59,MSM,Neg. or ind. >12 months,Overseas,Early,HIV,notification,PPN15
+BO,DE,27/09/1989,2036,31/05/2020,Overseas,30-39,HET,Unknown,Overseas,Advanced,HIV,notification,PPN16
+BE,JE,02/10/1957,2253,19/03/2022,Overseas,60+,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN17
+SH,RY,30/10/1977,2006,03/08/2022,Overseas,40-49,Injection Drug Use,Never tested before,Australia,Advanced,HIV,notification,PPN18
+HA,MO,02/06/1985,2081,02/07/2022,Australia,30-39,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN19
+DE,ME,11/10/1969,2001,30/06/2023,Australia,50-59,HET,Neg. or ind. >12 months,Australia,CD4 350-499,HIV,notification,PPN20
+SE,KE,03/07/1997,2144,27/01/2021,Australia,20-29,Unknown,Never tested before,Australia,Early,HIV,notification,PPN21
+BO,MA,11/05/2004,2007,26/01/2023,Overseas,10-19,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN22
+WI,SH,01/12/2007,2238,19/12/2022,Overseas,10-19,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN23
+EI,TA,19/03/2009,2047,05/03/2023,Australia,10-19,MSM,Neg. or ind. ≤12 months,Overseas,Early,HIV,notification,PPN24
+BE,MA,12/07/2006,2234,07/12/2021,Australia,10-19,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN25
+LY,TA,24/09/1954,2082,19/06/2023,Overseas,60+,MSM,Unknown,Australia,CD4 200-349,HIV,notification,PPN26
+RO,CH,23/02/1969,2206,21/12/2023,Overseas,50-59,Other,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN27
+SE,MA,09/07/2001,2162,12/03/2020,Overseas,10-19,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN28
+BO,MA,31/01/1956,2130,10/09/2021,Overseas,60+,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN29
+HO,SA,10/08/2005,2260,01/09/2022,Overseas,10-19,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN30
+VE,CH,19/09/2004,2359,29/04/2019,Overseas,10-19,Unknown,Never tested before,Overseas,Advanced,HIV,notification,PPN31
+GO,SY,07/01/1982,2195,29/10/2022,Overseas,40-49,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN32
+SH,LO,31/03/2009,2205,19/04/2023,Australia,10-19,MSM,Unknown,Australia,Early,HIV,notification,PPN33
+DE,SE,13/12/1979,2255,29/02/2020,Australia,40-49,HET,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN34
+WA,BR,03/11/1993,2073,16/04/2020,Australia,20-29,Injection Drug Use,Unknown,Australia,Advanced,HIV,notification,PPN35
+MU,KO,13/06/1953,2222,07/11/2021,Overseas,60+,MSM,Never tested before,Australia,Advanced,HIV,notification,PPN36
+LE,ST,21/09/1996,2299,21/01/2023,Overseas,20-29,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN37
+HU,SY,29/06/1952,2250,20/03/2023,Overseas,60+,MSM,Never tested before,Australia,Advanced,HIV,notification,PPN38
+MA,AR,30/01/1952,2064,27/05/2020,Overseas,60+,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN39
+BE,ST,21/08/1979,2296,08/06/2023,Overseas,40-49,Other,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN40
+OS,SA,07/10/1991,2034,12/07/2021,Overseas,20-29,MSM,Never tested before,Unknown,Advanced,HIV,notification,PPN41
+FE,AU,05/03/1994,2220,06/11/2020,Australia,20-29,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN42
+HI,ST,20/04/1982,2259,13/12/2023,Australia,40-49,HET,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN43
+BU,SH,17/03/1996,2135,23/12/2019,Overseas,20-29,HET,Neg. or ind. ≤12 months,Australia,CD4 350-499,HIV,notification,PPN44
+BR,SI,12/02/1963,2178,03/06/2019,Overseas,50-59,MSM,Neg. or ind. >12 months,Overseas,CD4 350-499,HIV,notification,PPN45
+MA,JO,11/12/2000,2169,14/08/2023,Australia,20-29,MSM,Neg. or ind. ≤12 months,Australia,CD4 350-499,HIV,notification,PPN46
+HI,CH,23/05/1974,2161,01/01/2019,Australia,40-49,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN47
+GA,CA,08/02/1978,2276,31/03/2022,Overseas,40-49,Other,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN48
+MU,SH,07/08/1980,2219,01/07/2023,Overseas,40-49,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN49
+TU,DA,24/04/1972,2142,10/10/2019,Overseas,40-49,Unknown,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN50
+HE,AN,14/07/1952,2119,16/05/2020,Australia,60+,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN51
+JU,EM,17/09/2003,2183,20/12/2023,Australia,20-29,Other,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN52
+WR,AM,24/07/1973,2284,06/06/2019,Overseas,40-49,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN53
+ST,SA,28/04/2006,2083,17/04/2019,Overseas,10-19,HET,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN54
+ST,ST,09/10/1977,2295,26/12/2020,Australia,40-49,MSM,Unknown,Australia,Early,HIV,notification,PPN55
+CA,KA,27/10/1992,2075,29/06/2021,Australia,20-29,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN56
+CA,AA,16/04/1979,2268,01/05/2021,Australia,40-49,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN57
+TH,DY,08/09/1987,2176,16/08/2021,Australia,30-39,MSM,Neg. or ind. >12 months,Unknown,Advanced,HIV,notification,PPN58
+FL,SO,19/02/1984,2138,24/12/2022,Overseas,30-39,Other,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN59
+RO,SI,08/05/2001,2270,23/09/2023,Overseas,20-29,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN60
+FA,HO,07/04/1966,2250,21/01/2019,Overseas,50-59,Other,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN61
+CO,EM,17/12/1980,2168,17/07/2023,Overseas,40-49,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN62
+FO,JO,12/07/1999,2063,12/12/2022,Overseas,20-29,HET,Neg. or ind. >12 months,Australia,CD4 350-499,HIV,notification,PPN63
+WA,BR,12/05/1955,2516,02/11/2019,Overseas,60+,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN64
+CA,CO,22/10/1995,2172,03/11/2021,Overseas,20-29,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN65
+MO,AD,09/11/1983,2077,26/08/2019,Overseas,30-39,Injection Drug Use,Unknown,Australia,CD4 500+,HIV,notification,PPN66
+MA,AL,24/06/1976,2142,09/10/2019,Overseas,40-49,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN67
+SM,RY,25/07/1975,2097,02/04/2022,Overseas,40-49,Injection Drug Use,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN68
+WE,SA,02/03/1953,2181,27/01/2021,Overseas,60+,MSM,Unknown,Australia,Early,HIV,notification,PPN69
+HE,KI,28/11/1993,2094,30/01/2023,Australia,20-29,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN70
+HA,SY,14/04/1988,2176,03/05/2023,Overseas,30-39,Other,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN71
+WR,JO,16/07/1970,2285,14/08/2019,Overseas,40-49,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN72
+PI,RO,10/03/1972,2305,16/12/2022,Overseas,50-59,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN73
+HA,CA,28/07/1951,2008,02/08/2023,Australia,60+,Injection Drug Use,Neg. or ind. ≤12 months,Unknown,Early,HIV,notification,PPN74
+CH,BR,24/07/1959,2204,18/03/2021,Australia,60+,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN75
+FL,IS,04/04/1955,2235,20/01/2023,Overseas,60+,MSM,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN76
+MA,SY,08/04/1969,2026,18/04/2020,Australia,50-59,MSM,Never tested before,Australia,Early,HIV,notification,PPN77
+EL,JO,12/11/1956,2157,27/07/2022,Overseas,60+,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN78
+HO,KA,28/02/1968,2161,19/05/2023,Overseas,50-59,MSM,Unknown,Australia,Early,HIV,notification,PPN79
+JE,ZA,13/09/1983,2006,31/10/2021,Australia,30-39,MSM,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN80
+CI,DA,18/11/1994,2145,28/06/2021,Overseas,20-29,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN81
+AR,AN,23/01/1965,2085,18/12/2019,Australia,50-59,MSM,Never tested before,Overseas,Advanced,HIV,notification,PPN82
+RA,CH,21/06/1992,2008,31/05/2021,Australia,20-29,Injection Drug Use,Neg. or ind. >12 months,Overseas,CD4 500+,HIV,notification,PPN83
+RO,KE,25/08/1990,2178,27/07/2020,Overseas,20-29,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN84
+HO,MA,16/04/1979,2222,10/01/2022,Overseas,40-49,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN85
+DU,HA,11/12/1983,2073,05/07/2021,Australia,30-39,Other,Unknown,Australia,CD4 500+,HIV,notification,PPN86
+IR,MI,20/07/1988,2270,29/08/2020,Australia,30-39,Unknown,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN87
+DE,CH,31/08/1997,2326,19/10/2023,Australia,20-29,Injection Drug Use,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN88
+PE,LE,30/03/2007,2093,19/11/2023,Overseas,10-19,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN89
+HA,JA,11/07/1972,2167,21/08/2021,Overseas,40-49,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN90
+SU,NI,30/11/1977,2070,27/03/2023,Australia,40-49,Unknown,Neg. or ind. >12 months,Overseas,Early,HIV,notification,PPN91
+BA,CA,08/03/1967,2195,12/09/2020,Overseas,50-59,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN92
+SM,JA,04/06/2003,2278,27/04/2022,Overseas,10-19,MSM,Never tested before,Australia,Advanced,HIV,notification,PPN93
+TA,GI,10/03/1951,2067,02/03/2020,Overseas,60+,HET,Neg. or ind. >12 months,Australia,CD4 350-499,HIV,notification,PPN94
+MA,CH,04/05/2002,2168,18/02/2021,Overseas,10-19,HET,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN95
+CO,LE,01/08/1953,2594,27/12/2019,Australia,60+,Injection Drug Use,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN96
+RO,CH,20/07/1989,2213,28/06/2019,Overseas,20-29,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN97
+DE,BR,31/08/1973,2160,06/12/2022,Overseas,40-49,MSM,Unknown,Australia,Advanced,HIV,notification,PPN98
+GU,TA,07/07/1965,2015,12/09/2023,Overseas,50-59,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN99
+CH,MI,09/10/2009,2297,24/09/2019,Overseas,0-9,HET,Unknown,Australia,Early,HIV,notification,PPN100
+SC,AL,10/07/1968,2115,16/03/2023,Overseas,50-59,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN101
+ZA,NI,30/01/2004,2071,23/11/2023,Australia,10-19,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN102
+JE,HU,02/01/1951,2257,28/06/2023,Australia,60+,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN103
+WA,DE,22/07/1967,2197,09/04/2023,Overseas,50-59,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN104
+OC,JA,05/04/1951,2218,05/04/2019,Overseas,60+,MSM,Neg. or ind. >12 months,Overseas,Early,HIV,notification,PPN105
+KL,AS,25/02/1965,2149,22/02/2022,Overseas,50-59,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN106
+LE,NI,05/02/1965,2236,31/07/2019,Overseas,50-59,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN107
+CO,LO,24/12/1970,2287,01/07/2021,Overseas,50-59,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN108
+MC,DO,15/08/1979,2238,13/03/2019,Overseas,30-39,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN109
+WI,RO,05/08/1988,2061,05/11/2021,Australia,30-39,Injection Drug Use,Unknown,Australia,Advanced,HIV,notification,PPN110
+GI,DE,05/11/1974,2184,18/08/2019,Overseas,40-49,Unknown,Neg. or ind. ≤12 months,Australia,CD4 350-499,HIV,notification,PPN111
+CU,DE,17/10/1999,2491,26/02/2020,Overseas,20-29,Unknown,Neg. or ind. >12 months,Overseas,CD4 350-499,HIV,notification,PPN112
+MA,MI,08/10/1958,2080,26/12/2023,Overseas,60+,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN113
+ST,CA,22/12/1974,2355,27/01/2022,Overseas,40-49,MSM,Neg. or ind. ≤12 months,Australia,Unknown,HIV,notification,PPN114
+MY,ST,13/07/1976,2012,04/10/2022,Overseas,40-49,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN115
+NO,SO,04/05/1957,2169,15/07/2020,Overseas,60+,HET,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN116
+DR,ER,07/03/1985,2054,17/05/2020,Overseas,30-39,MSM,Unknown,Overseas,Advanced,HIV,notification,PPN117
+RI,BA,11/10/1992,2077,21/05/2020,Overseas,20-29,HET,Neg. or ind. ≤12 months,Australia,CD4 350-499,HIV,notification,PPN118
+SA,MA,26/10/2008,2031,02/03/2021,Australia,10-19,MSM,Unknown,Australia,Early,HIV,notification,PPN119
+MC,RY,29/11/1955,2069,22/03/2020,Overseas,60+,HET,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN120
+HE,BR,28/12/1986,2274,05/12/2019,Overseas,30-39,Other,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN121
+HE,KA,04/09/1978,2046,11/04/2023,Australia,40-49,Injection Drug Use,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN122
+HE,BA,16/05/1986,2492,04/08/2022,Overseas,30-39,HET,Neg. or ind. >12 months,Australia,CD4 350-499,HIV,notification,PPN123
+MI,DI,22/12/1970,2205,25/09/2023,Overseas,50-59,HET,Neg. or ind. ≤12 months,Australia,CD4 200-349,HIV,notification,PPN124
+KO,KR,05/12/1987,2377,19/10/2022,Overseas,30-39,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN125
+HA,HE,15/03/1968,2093,18/08/2019,Overseas,50-59,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN126
+PA,JE,25/03/1982,2070,12/06/2019,Australia,30-39,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN127
+OF,DA,24/07/1972,2105,21/06/2021,Overseas,40-49,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN128
+KU,BR,05/08/1966,2138,12/02/2023,Overseas,50-59,HET,Unknown,Australia,Advanced,HIV,notification,PPN129
+TI,JA,07/10/2003,2114,02/11/2019,Overseas,10-19,MSM,Neg. or ind. >12 months,Australia,CD4 200-349,HIV,notification,PPN130
+BA,MI,17/09/1968,2147,21/05/2020,Overseas,50-59,Injection Drug Use,Never tested before,Australia,Advanced,HIV,notification,PPN131
+RO,DA,06/01/1980,2089,14/02/2019,Overseas,30-39,HET,Never tested before,Overseas,Advanced,HIV,notification,PPN132
+SA,SU,24/06/1994,2108,05/06/2023,Overseas,20-29,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN133
+BO,GA,20/06/1985,2145,06/04/2023,Australia,30-39,MSM,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN134
+AN,AD,13/07/2003,2578,14/06/2020,Overseas,10-19,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN135
+ED,SA,14/05/1969,2077,16/11/2022,Overseas,50-59,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN136
+HA,AN,11/04/1953,2207,14/03/2023,Overseas,60+,Injection Drug Use,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN137
+HA,AL,18/11/2004,2095,15/08/2023,Overseas,10-19,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN138
+LI,EC,25/10/1974,2126,13/11/2022,Australia,40-49,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN139
+PF,MC,05/11/1970,2116,30/08/2023,Overseas,50-59,Other,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN140
+AS,FE,02/07/2007,2267,09/03/2022,Overseas,10-19,MSM,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN141
+KE,KR,01/07/1963,2154,26/06/2023,Overseas,50-59,Injection Drug Use,Neg. or ind. >12 months,Unknown,Advanced,HIV,notification,PPN142
+MC,GR,06/12/1988,2224,11/04/2023,Australia,30-39,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN143
+PE,AU,20/02/1965,2095,14/02/2020,Overseas,50-59,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN144
+VA,KA,02/09/1951,2180,11/11/2020,Australia,60+,MSM,Never tested before,Australia,CD4 350-499,HIV,notification,PPN145
+KN,WI,21/02/2000,2272,24/07/2022,Australia,20-29,MSM,Never tested before,Australia,CD4 500+,HIV,notification,PPN146
+FE,BR,26/12/1955,2039,05/01/2021,Overseas,60+,Unknown,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN147
+GR,AL,04/10/1996,2142,13/03/2019,Overseas,20-29,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN148
+MC,ER,18/05/1989,2167,13/04/2022,Overseas,30-39,Other,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN149
+MA,BR,07/10/1982,2176,15/01/2022,Overseas,30-39,Unknown,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN150
+MO,CA,13/11/1963,2229,21/07/2020,Australia,50-59,HET,Unknown,Australia,Early,HIV,notification,PPN151
+RO,HA,08/11/2002,2273,04/08/2020,Australia,10-19,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN152
+KO,WE,26/08/1981,2202,27/06/2022,Overseas,40-49,Other,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN153
+MA,LO,22/09/1962,2061,11/06/2021,Overseas,50-59,HET,Neg. or ind. >12 months,Overseas,CD4 500+,HIV,notification,PPN154
+OL,WE,20/02/1992,2005,08/05/2019,Overseas,20-29,MSM,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN155
+LA,OW,12/01/1994,2150,17/09/2023,Overseas,20-29,MSM,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN156
+WI,NA,07/03/1952,2253,12/03/2022,Overseas,60+,Unknown,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN157
+FI,KA,14/05/1967,2056,17/01/2022,Australia,50-59,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN158
+AC,MA,09/09/2001,2212,24/05/2021,Australia,10-19,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN159
+AG,JA,25/10/1988,2254,13/12/2021,Overseas,30-39,Other,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN160
+WI,CO,29/10/1963,2109,30/10/2021,Overseas,50-59,Other,Never tested before,Australia,Advanced,HIV,notification,PPN161
+PL,MA,04/03/1975,2162,09/09/2019,Australia,40-49,Unknown,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN162
+MI,ER,15/07/1995,2099,14/06/2023,Overseas,20-29,HET,Neg. or ind. ≤12 months,Unknown,CD4 350-499,HIV,notification,PPN163
+GA,KE,22/08/1976,2106,20/11/2019,Overseas,40-49,Other,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN164
+BO,AN,27/12/1967,2053,09/11/2021,Overseas,50-59,Injection Drug Use,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN165
+GR,LA,04/05/1953,2118,08/08/2019,Australia,60+,Other,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN166
+PE,KA,07/10/1998,2246,28/07/2019,Overseas,20-29,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN167
+HI,ME,27/02/1992,2292,05/10/2023,Australia,30-39,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN168
+DO,JA,08/03/2000,2052,30/10/2021,Overseas,20-29,Other,Neg. or ind. ≤12 months,Overseas,Early,HIV,notification,PPN169
+DR,SA,14/03/1971,2213,23/02/2021,Overseas,40-49,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN170
+PA,TR,30/09/1994,2239,30/04/2023,Overseas,20-29,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN171
+UJ,TY,03/01/1976,2207,25/01/2021,Australia,40-49,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN172
+HA,JA,24/11/1985,2096,27/10/2023,Australia,30-39,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN173
+ST,DA,04/07/1997,2164,15/01/2021,Australia,20-29,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN174
+HE,KY,14/11/2000,2296,22/08/2020,Overseas,10-19,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN175
+IN,JO,10/03/1958,2137,21/06/2019,Overseas,60+,MSM,Unknown,Australia,Advanced,HIV,notification,PPN176
+MO,RE,30/01/1968,2153,29/07/2021,Overseas,50-59,Injection Drug Use,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN177
+RO,AN,20/10/1957,2143,24/06/2022,Overseas,60+,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN178
+SO,CA,07/07/1956,2035,01/11/2022,Overseas,60+,HET,Neg. or ind. >12 months,Unknown,Early,HIV,notification,PPN179
+GR,AL,03/10/2006,2010,03/02/2021,Overseas,10-19,MSM,Neg. or ind. ≤12 months,Overseas,Early,HIV,notification,PPN180
+FO,BR,28/04/1952,2126,30/06/2022,Overseas,60+,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN181
+BA,TY,07/10/2006,2088,19/02/2023,Australia,10-19,Injection Drug Use,Neg. or ind. ≤12 months,Australia,CD4 350-499,HIV,notification,PPN182
+MC,DA,22/08/2004,2135,24/08/2020,Australia,10-19,MSM,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN183
+VE,JO,01/12/1958,2049,18/08/2022,Australia,60+,Unknown,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN184
+BA,AN,29/07/2007,2131,31/12/2023,Overseas,10-19,MSM,Neg. or ind. ≤12 months,Australia,CD4 350-499,HIV,notification,PPN185
+KI,SY,15/07/1975,2092,11/03/2021,Australia,40-49,MSM,Unknown,Australia,Early,HIV,notification,PPN186
+CO,KY,18/09/1999,2002,31/01/2020,Overseas,20-29,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN187
+KO,HO,15/07/2004,2014,28/11/2022,Australia,10-19,Unknown,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN188
+SP,WE,22/08/2008,2272,25/07/2022,Overseas,10-19,Unknown,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN189
+SE,CH,16/09/1986,2069,16/07/2023,Australia,30-39,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN190
+BL,JE,25/07/2005,2061,21/12/2019,Australia,10-19,Injection Drug Use,Never tested before,Australia,Advanced,HIV,notification,PPN191
+GR,BA,29/05/2006,2287,15/12/2021,Overseas,10-19,MSM,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN192
+KR,JO,07/12/1983,2208,16/03/2022,Overseas,30-39,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN193
+PI,SH,26/05/1977,2134,15/07/2022,Australia,40-49,Unknown,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN194
+PR,HA,08/09/1998,2281,13/02/2021,Australia,20-29,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN195
+BO,JO,04/08/1995,2219,25/04/2019,Australia,20-29,HET,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN196
+CH,GA,28/02/2008,2069,17/07/2022,Overseas,10-19,Other,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN197
+TH,AN,24/12/1980,2245,01/09/2021,Australia,40-49,HET,Never tested before,Australia,Early,HIV,notification,PPN198
+BI,AN,20/04/1984,2145,22/04/2022,Overseas,30-39,Unknown,Neg. or ind. >12 months,Overseas,Early,HIV,notification,PPN199
+SC,TR,30/12/2002,2085,15/03/2020,Overseas,10-19,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN200
+CL,ME,12/06/1970,2131,09/07/2021,Overseas,50-59,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN201
+KE,SC,03/10/1970,2265,25/11/2021,Australia,50-59,HET,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN202
+HA,HA,30/04/1974,2065,13/10/2022,Overseas,40-49,Injection Drug Use,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN203
+PR,PA,24/12/1989,2047,11/07/2022,Australia,30-39,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN204
+BE,JA,31/08/1951,2145,21/11/2021,Overseas,60+,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN205
+HA,PA,02/03/1998,2248,20/11/2020,Australia,20-29,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN206
+DA,SA,11/02/1982,2178,18/08/2022,Australia,40-49,HET,Never tested before,Australia,Advanced,HIV,notification,PPN207
+HU,ER,07/06/1965,2259,23/02/2023,Overseas,50-59,Injection Drug Use,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN208
+MC,MA,13/10/1976,2249,25/04/2020,Overseas,40-49,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN209
+ST,ER,03/01/1990,2052,31/12/2019,Overseas,20-29,Other,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN210
+KN,MA,07/06/2000,2008,24/03/2022,Overseas,20-29,MSM,Neg. or ind. ≤12 months,Unknown,Early,HIV,notification,PPN211
+AZ,AA,12/12/1970,2028,16/03/2023,Overseas,50-59,Unknown,Neg. or ind. >12 months,Overseas,CD4 350-499,HIV,notification,PPN212
+EL,SA,03/01/1976,2030,09/11/2021,Overseas,40-49,MSM,Unknown,Unknown,Early,HIV,notification,PPN213
+CL,JA,22/06/1970,2216,01/03/2022,Australia,50-59,Unknown,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN214
+LE,CA,05/02/1957,2029,22/07/2021,Overseas,60+,Injection Drug Use,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN215
+CL,PA,17/05/1972,2169,14/01/2021,Overseas,40-49,HET,Unknown,Australia,Early,HIV,notification,PPN216
+BO,LO,10/03/2005,2120,02/03/2022,Overseas,10-19,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN217
+JA,JA,18/05/2006,2293,30/05/2020,Overseas,10-19,HET,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN218
+LE,SE,14/09/1980,2260,18/11/2022,Australia,40-49,Injection Drug Use,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN219
+O ,DA,17/01/1963,2223,04/04/2022,Australia,50-59,Unknown,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN220
+RA,LA,16/01/1954,2230,05/11/2021,Overseas,60+,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN221
+DI,AS,30/08/1981,2022,15/09/2019,Overseas,30-39,HET,Never tested before,Australia,Early,HIV,notification,PPN222
+SM,ME,27/05/1986,2194,18/10/2023,Australia,30-39,MSM,Never tested before,Australia,Early,HIV,notification,PPN223
+MC,AN,26/05/2007,2061,31/10/2023,Australia,10-19,MSM,Never tested before,Unknown,Early,HIV,notification,PPN224
+NE,TR,23/12/2000,2031,19/10/2023,Overseas,20-29,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN225
+BO,AU,21/10/1956,2218,12/08/2022,Overseas,60+,Unknown,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN226
+HA,CH,20/06/1990,2321,18/04/2021,Overseas,30-39,Other,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN227
+WU,DE,27/12/1952,2298,28/01/2020,Australia,60+,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN228
+SH,JA,18/08/1963,2122,18/08/2021,Overseas,50-59,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN229
+LY,SY,19/10/2004,2555,24/09/2023,Australia,10-19,MSM,Unknown,Australia,Advanced,HIV,notification,PPN230
+AR,GR,01/05/1981,2202,31/05/2022,Australia,40-49,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN231
+RU,PA,10/11/1957,2290,03/06/2021,Overseas,60+,MSM,Unknown,Australia,Advanced,HIV,notification,PPN232
+HA,SE,23/10/1954,2149,09/02/2021,Overseas,60+,HET,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN233
+MO,GA,29/06/1972,2293,18/07/2022,Australia,50-59,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN234
+SC,JE,28/03/1951,2129,01/09/2019,Australia,60+,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN235
+WE,BR,01/07/1992,2119,23/02/2019,Overseas,20-29,MSM,Neg. or ind. >12 months,Overseas,CD4 500+,HIV,notification,PPN236
+GU,GA,31/01/1987,2279,02/05/2023,Overseas,30-39,Injection Drug Use,Never tested before,Australia,Early,HIV,notification,PPN237
+DE,SH,31/03/1991,2043,18/03/2021,Overseas,20-29,MSM,Unknown,Australia,Advanced,HIV,notification,PPN238
+SC,LA,15/09/2004,2119,14/03/2020,Australia,10-19,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN239
+CA,MA,25/08/2008,2036,24/04/2021,Overseas,10-19,Unknown,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN240
+BA,BR,27/06/1986,2091,29/08/2023,Overseas,30-39,Other,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN241
+WI,AL,23/09/1970,2014,25/10/2020,Overseas,50-59,Other,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN242
+PU,JA,21/12/1993,2211,27/04/2019,Overseas,20-29,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN243
+MA,ZA,27/08/1976,2002,11/05/2022,Overseas,40-49,HET,Never tested before,Australia,CD4 500+,HIV,notification,PPN244
+NO,DE,22/05/1984,2237,26/01/2023,Overseas,30-39,Unknown,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN245
+EH,DE,24/05/1958,2067,10/12/2019,Australia,60+,Unknown,Neg. or ind. >12 months,Australia,Unknown,HIV,notification,PPN246
+SH,DA,27/09/1975,2139,29/12/2020,Australia,40-49,Other,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN247
+AS,RO,10/03/1985,2046,08/01/2021,Overseas,30-39,MSM,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN248
+BU,LA,18/08/1966,2066,11/06/2021,Australia,50-59,Injection Drug Use,Neg. or ind. >12 months,Australia,CD4 350-499,HIV,notification,PPN249
+PA,CA,30/05/1961,2214,02/05/2020,Overseas,50-59,MSM,Neg. or ind. >12 months,Overseas,Early,HIV,notification,PPN250
+GR,ZA,23/02/1960,2084,03/01/2020,Overseas,50-59,Other,Unknown,Australia,Advanced,HIV,notification,PPN251
+RH,TH,28/02/1970,2174,02/07/2020,Australia,50-59,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN252
+MO,KY,17/04/1988,2005,23/03/2021,Overseas,30-39,MSM,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN253
+AN,JA,08/04/1981,2475,09/07/2019,Australia,30-39,Injection Drug Use,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN254
+GA,NO,18/05/1956,2258,16/08/2020,Overseas,60+,MSM,Neg. or ind. >12 months,Overseas,Early,HIV,notification,PPN255
+ST,CL,07/09/1998,2166,17/10/2021,Australia,20-29,MSM,Unknown,Australia,Unknown,HIV,notification,PPN256
+JO,AL,15/01/1962,2208,20/05/2019,Australia,50-59,Injection Drug Use,Unknown,Australia,Advanced,HIV,notification,PPN257
+ER,RA,25/03/1988,2017,10/02/2019,Overseas,30-39,Unknown,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN258
+BE,SE,20/05/1995,2106,22/02/2019,Australia,20-29,Injection Drug Use,Neg. or ind. >12 months,Overseas,CD4 350-499,HIV,notification,PPN259
+PU,DE,06/03/1950,2234,07/11/2021,Overseas,60+,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN260
+NG,JO,16/02/1951,2038,15/03/2021,Overseas,60+,MSM,Unknown,Australia,Advanced,HIV,notification,PPN261
+LO,AL,25/05/1978,2277,09/10/2019,Australia,40-49,MSM,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN262
+PH,JA,12/06/1997,2295,13/11/2022,Australia,20-29,Other,Never tested before,Australia,Advanced,HIV,notification,PPN263
+NA,NE,26/03/2004,2214,02/08/2022,Overseas,10-19,Other,Never tested before,Australia,Advanced,HIV,notification,PPN264
+BI,AS,27/05/1983,2177,03/06/2022,Australia,30-39,Injection Drug Use,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN265
+TS,AM,09/12/1954,2003,14/11/2020,Overseas,60+,MSM,Neg. or ind. >12 months,Australia,CD4 500+,HIV,notification,PPN266
+CH,AL,07/12/1956,2076,25/04/2021,Overseas,60+,HET,Neg. or ind. ≤12 months,Overseas,Advanced,HIV,notification,PPN267
+NE,BR,14/09/2001,2003,29/07/2022,Overseas,20-29,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN268
+CH,JE,10/09/2003,2297,25/12/2023,Australia,20-29,Other,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN269
+MA,SA,10/06/1973,2320,24/12/2023,Overseas,50-59,Injection Drug Use,Unknown,Australia,Advanced,HIV,notification,PPN270
+NE,KE,10/08/1992,2118,14/03/2020,Overseas,20-29,Injection Drug Use,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN271
+CH,DA,16/04/1951,2140,22/02/2019,Australia,60+,HET,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN272
+LE,AN,18/12/1967,2421,12/12/2019,Australia,50-59,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN273
+AR,AS,31/07/2003,2135,27/11/2022,Australia,10-19,MSM,Unknown,Overseas,Advanced,HIV,notification,PPN274
+ST,KA,21/12/1959,2051,09/01/2020,Australia,60+,HET,Neg. or ind. ≤12 months,Overseas,Early,HIV,notification,PPN275
+TR,TI,19/05/1958,2162,10/11/2019,Overseas,60+,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN276
+ME,DO,13/09/1955,2261,02/11/2021,Overseas,60+,MSM,Neg. or ind. >12 months,Unknown,Early,HIV,notification,PPN277
+AG,JE,05/06/1961,2278,25/09/2019,Overseas,50-59,MSM,Never tested before,Overseas,Early,HIV,notification,PPN278
+OR,DA,31/08/1954,2009,23/02/2023,Overseas,60+,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN279
+MA,GI,08/03/1970,2094,17/08/2021,Overseas,50-59,Injection Drug Use,Never tested before,Australia,Advanced,HIV,notification,PPN280
+SI,FR,07/07/1962,2167,19/07/2020,Overseas,50-59,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN281
+HO,MA,01/02/2009,2037,17/11/2022,Australia,10-19,Injection Drug Use,Neg. or ind. >12 months,Australia,CD4 350-499,HIV,notification,PPN282
+GU,JO,20/02/1954,2095,23/07/2022,Australia,60+,Other,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN283
+GA,AL,11/12/1976,2403,31/12/2022,Australia,40-49,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN284
+PE,YA,04/09/1968,2117,21/10/2023,Overseas,50-59,MSM,Neg. or ind. >12 months,Australia,CD4 350-499,HIV,notification,PPN285
+MA,SI,01/03/1962,2155,04/12/2019,Overseas,50-59,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN286
+RO,TA,21/07/1981,2023,12/05/2021,Overseas,30-39,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN287
+EN,AN,19/03/2007,2283,26/12/2023,Overseas,10-19,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN288
+SA,DE,18/09/2005,2232,19/10/2019,Australia,10-19,MSM,Never tested before,Australia,Advanced,HIV,notification,PPN289
+LO,YE,10/10/1999,2012,07/02/2022,Overseas,20-29,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN290
+GO,MA,29/09/1964,2088,02/02/2019,Overseas,50-59,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN291
+HA,RO,13/03/1987,2082,11/04/2020,Overseas,30-39,Other,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN292
+TR,BE,25/05/1976,2203,27/04/2021,Overseas,40-49,MSM,Neg. or ind. ≤12 months,Australia,CD4 350-499,HIV,notification,PPN293
+CI,EF,29/07/1963,2238,20/10/2022,Australia,50-59,HET,Unknown,Australia,Early,HIV,notification,PPN294
+AB,AN,01/09/1973,2021,27/06/2022,Overseas,40-49,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN295
+CR,SH,22/09/1996,2185,02/03/2022,Australia,20-29,Other,Unknown,Australia,Advanced,HIV,notification,PPN296
+VI,SH,23/11/1950,2256,20/10/2020,Australia,60+,HET,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN297
+GI,KE,20/04/1958,2044,12/08/2020,Australia,60+,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN298
+TR,MO,07/09/1971,2181,17/04/2021,Australia,40-49,Injection Drug Use,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN299
+JA,SA,01/04/1956,2300,24/02/2019,Overseas,60+,HET,Unknown,Australia,Advanced,HIV,notification,PPN300
+RO,HA,03/03/1964,2236,25/05/2019,Overseas,50-59,MSM,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN301
+MC,GI,17/01/1961,2017,24/07/2021,Overseas,60+,Other,Neg. or ind. ≤12 months,Australia,CD4 350-499,HIV,notification,PPN302
+ME,HA,03/07/1955,2000,24/11/2023,Overseas,60+,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN303
+AR,KA,15/04/1961,2090,13/09/2022,Australia,60+,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN304
+CA,KY,10/01/2004,2297,08/09/2023,Overseas,10-19,Unknown,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN305
+CA,AU,19/10/1994,2116,30/03/2022,Australia,20-29,MSM,Never tested before,Australia,Advanced,HIV,notification,PPN306
+KE,MI,06/11/1980,2224,11/08/2020,Australia,30-39,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN307
+VA,NA,17/09/1962,2127,12/11/2023,Overseas,60+,MSM,Unknown,Australia,Advanced,HIV,notification,PPN308
+BU,DE,12/02/1952,2078,07/08/2023,Australia,60+,Other,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN309
+MO,EN,02/09/1974,2231,03/01/2022,Overseas,40-49,Unknown,Never tested before,Overseas,Early,HIV,notification,PPN310
+EL,AN,01/10/2009,2068,14/01/2019,Overseas,0-9,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN311
+CA,RA,10/08/1958,2562,13/08/2019,Overseas,60+,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN312
+BO,JI,22/04/1963,2024,29/04/2020,Overseas,50-59,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN313
+CO,AS,23/07/1961,2134,20/12/2019,Overseas,50-59,Other,Neg. or ind. ≤12 months,Overseas,CD4 350-499,HIV,notification,PPN314
+VI,JE,18/02/1964,2035,10/12/2023,Australia,50-59,MSM,Never tested before,Australia,Early,HIV,notification,PPN315
+LO,HE,07/04/1982,2228,05/12/2022,Overseas,40-49,Other,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN316
+MA,ME,24/06/1951,2186,20/02/2019,Overseas,60+,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN317
+FL,AN,25/04/1964,2093,20/06/2019,Australia,50-59,Other,Neg. or ind. >12 months,Australia,CD4 350-499,HIV,notification,PPN318
+PA,JE,08/06/1981,2135,08/06/2023,Overseas,40-49,HET,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN319
+CO,VA,30/11/1978,2140,23/01/2021,Overseas,40-49,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN320
+MO,OR,08/07/1985,2058,23/08/2020,Overseas,30-39,MSM,Neg. or ind. ≤12 months,Overseas,Early,HIV,notification,PPN321
+ES,JO,04/05/1976,2183,08/11/2023,Australia,40-49,MSM,Unknown,Australia,Early,HIV,notification,PPN322
+VI,FA,03/09/1963,2220,05/02/2021,Australia,50-59,MSM,Neg. or ind. >12 months,Australia,Unknown,HIV,notification,PPN323
+HA,CA,24/10/2002,2043,15/09/2021,Overseas,10-19,HET,Neg. or ind. ≤12 months,Australia,CD4 500+,HIV,notification,PPN324
+LL,IS,21/08/1967,2121,08/08/2023,Australia,50-59,HET,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN325
+ME,VE,27/09/1973,2111,09/05/2021,Overseas,40-49,Injection Drug Use,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN326
+QU,SH,13/12/1992,2031,31/12/2019,Overseas,20-29,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN327
+GA,GE,10/12/2006,2071,10/08/2021,Overseas,10-19,Unknown,Neg. or ind. >12 months,Unknown,Advanced,HIV,notification,PPN328
+GA,AN,01/09/2009,2181,06/12/2019,Australia,10-19,Unknown,Unknown,Australia,Advanced,HIV,notification,PPN329
+ES,DI,01/03/1985,2283,11/02/2021,Overseas,30-39,MSM,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN330
+AC,JA,13/06/1973,2042,01/11/2022,Overseas,40-49,HET,Neg. or ind. >12 months,Unknown,CD4 500+,HIV,notification,PPN331
+FL,TA,21/09/1976,2244,07/03/2019,Australia,40-49,HET,Neg. or ind. ≤12 months,Overseas,Unknown,HIV,notification,PPN332
+ZA,LU,10/08/2008,2191,01/09/2022,Australia,10-19,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN333
+OR,RA,24/11/1952,2068,06/04/2023,Overseas,60+,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN334
+AT,AN,25/05/1982,2014,29/06/2020,Australia,30-39,Unknown,Neg. or ind. >12 months,Overseas,Early,HIV,notification,PPN335
+SA,MI,17/06/1983,2240,22/08/2023,Australia,40-49,Injection Drug Use,Unknown,Australia,Early,HIV,notification,PPN336
+AR,CI,07/07/1956,2179,26/09/2023,Australia,60+,Injection Drug Use,Unknown,Australia,Early,HIV,notification,PPN337
+RE,SA,17/09/1951,2068,25/02/2021,Overseas,60+,Unknown,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN338
+FE,RU,17/07/1982,2181,16/11/2022,Australia,40-49,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN339
+BA,RO,02/06/2002,2276,03/08/2019,Overseas,10-19,MSM,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN340
+SO,JO,16/08/1995,2191,26/08/2021,Australia,20-29,MSM,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN341
+VI,JA,01/02/2008,2122,15/05/2022,Overseas,10-19,HET,Neg. or ind. >12 months,Australia,Early,HIV,notification,PPN342
+GA,NA,17/08/1989,2286,31/10/2020,Overseas,30-39,MSM,Neg. or ind. >12 months,Overseas,Advanced,HIV,notification,PPN343
+EN,RY,12/02/1983,2131,20/02/2020,Overseas,30-39,MSM,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN344
+PE,PE,13/05/1988,2190,23/12/2019,Overseas,30-39,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Advanced,HIV,notification,PPN345
+MO,DA,14/06/1952,2029,01/01/2021,Australia,60+,Injection Drug Use,Neg. or ind. ≤12 months,Australia,Early,HIV,notification,PPN346
+CH,ZA,24/10/1988,2098,05/01/2023,Overseas,30-39,MSM,Neg. or ind. >12 months,Australia,Advanced,HIV,notification,PPN347

@@ -1,0 +1,54 @@
+# docker-compose.yml
+
+services:
+  api:
+    restart: on-failure
+    build:
+      context: ./demo-api
+      dockerfile: Dockerfile
+    profiles: ["lab", "phu"]
+    volumes:
+      - app_data:/user/code/data
+      - ./demo-api:/user/code
+      - /user/code/node_modules
+      - fasta_data:/user/code${FASTA_STORAGE_PATH}
+      - record_data:/user/code${RECORD_STORAGE_PATH}
+    env_file:
+      - ./envs/.env.dev.${NODE_ID}
+    depends_on:
+      - sql
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+      - ${DEBUG_PORT}:${DEBUG_PORT}
+    expose: 
+      - ${SERVER_PORT}
+      - ${DEBUG_PORT}
+    networks:
+      - backend
+
+  sql:
+    restart: on-failure
+    image: mysql:8.2.0
+    profiles: ["lab", "phu"]
+    environment:
+      MYSQL_DATABASE: h2seq
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_TCP_PORT: ${DB_PORT}
+    ports: 
+      - ${DB_PORT}:${DB_PORT}
+    expose: 
+      - ${DB_PORT}
+    volumes:
+      - ./dbinit/demo-${NODE_TYPE}-init.sql:/docker-entrypoint-initdb.d/0_init.sql
+      - db:/var/lib/mysql
+    networks:
+      - backend
+
+volumes: 
+  app_data:
+  fasta_data:
+  record_data:
+  db:
+
+networks:
+  backend:

@@ -1,0 +1,9 @@
+.env.dev*
+node_modules
+logs
+TODO.md
+**DS_Store
+demo-api/cert
+.vscode
+.venv
+__pycache__
