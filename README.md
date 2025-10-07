@@ -10,13 +10,21 @@ This repository contains the source code for the SecureEpiLink project, which ai
 -   [Documentation](#documentation)
 -   [License](#license)
 
-## Introduction {#introduction}
+## Introduction
 
 The proof of concept (POC) will focus on establishing and testing a system for data node initialisation and data linkage, with a key objective to illustrate how within-jurisdiction data linkage between two illustrative data nodes, representing a public health unit and a pathology laboratory, can occur in near real-time. The POC will showcase the concept of decentralised data sharing and data linkage and assess the practical potential in application and implementation in a product framework.
 
-Users are able to: 1. Set up demo nodes (One public health node and two lab nodes) 2. Upload mock data to nodes 3. Initiate a data linkage transaction between two nodes 4. Inspect the status and results of a linkage transaction
+Users are able to:
 
-## Business logic {#business-logic}
+1.  Set up demo nodes (One public health node and two lab nodes)
+
+2.  Upload mock data to nodes
+
+3.  Initiate a data linkage transaction between two nodes
+
+4.  Inspect the status and results of a linkage transaction
+
+## Business logic
 
 #### Nodes
 
@@ -48,7 +56,7 @@ The linkage and data sharing process between two nodes is managed within one tra
     Public Health Node -->> Lab Node: Verified matches
 ```
 
-## Prerequisites {#prerequisites}
+## Prerequisites
 
 -   Docker Engine / Desktop (⩾ v20.10)
 
@@ -56,14 +64,14 @@ The linkage and data sharing process between two nodes is managed within one tra
 
 -   GNU Make (⩾ v3.8)
 
-## Documentation {#documentation}
+## Documentation
 
 Detailed user and dev guides can be found in the `docs` folder.
 
--   [**User guide**]{.underline} - outlines how to set up demo nodes, upload custom data and run linkage transactions
+-   [**User guide**](/docs/USER_GUIDE.md) - outlines how to set up demo nodes, upload custom data and run linkage transactions
 
--   [**Dev guide**]{.underline} - briefly outlines some of the key components of the code base
+-   [**Dev guide**](/docs/DEV_GUIDE.md) - briefly outlines some of the key components of the code base
 
-## License {#license}
+## License
 
 TBD
