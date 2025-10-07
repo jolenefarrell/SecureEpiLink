@@ -6,7 +6,7 @@ const helper = require('../helper')
 const config = require('../config')
 
 // Get API key from database for a given node
-async function get (node) {
+async function get(node) {
   let data = null
   let key = ''
   const field = 'node_id'
@@ -20,7 +20,7 @@ async function get (node) {
     logger.error('ERROR : Failed to get key')
     logger.error(error.message)
   }
-  
+
   if (data && data.length == 1) {
     key = data[0].key
   }
@@ -29,18 +29,18 @@ async function get (node) {
 }
 
 // Hash API key prior to sending in API header
-async function hash (key, salt) {
+async function hash(key, salt) {
   const stringToHash = key + salt
 
   const hashedKey = createHash('sha256')
-  .update(stringToHash)
-  .digest('hex') // Returns a string representation of the hash
+    .update(stringToHash)
+    .digest('hex') // Returns a string representation of the hash
 
   return hashedKey
 }
 
 // Verify two keys (incoming and local) are the same
-async function verify (incoming, local) {
+async function verify(incoming, local) {
   let result = "UNAUTHENTICATED"
   if (incoming === local) {
     result = "AUTHENTICATED"
@@ -55,14 +55,14 @@ async function serverAuthMiddleware(req, res, next) {
 
   let apiKey = req.get('x-api-key')
   let clientId = req.get('x-client-id')
-  
+
   // Temporary account for admin (POSTMAN) requests
   if (clientId === 'H2SEQADMIN') {
     logger.info("H2SEQ Admin Request Incoming")
     apiKey = ''
     // API key doesn't get hashed prior to request so needs to be hashed first
     apiKey = await hash(apiKey, clientId)
-  
+
   } else if (clientId === 'VITECLIENT') {
     // Temporary work around for dashboard requests
     logger.info("H2SEQ Portal Request Incoming")
@@ -83,9 +83,9 @@ async function serverAuthMiddleware(req, res, next) {
     return res.sendStatus(401)
   } else {
     logger.info('SUCCESSFULLY AUTHENTICATED')
-    return next() 
+    return next()
   }
-  
+
 }
 
 // Client authentication middleware
