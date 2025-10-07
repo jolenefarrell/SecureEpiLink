@@ -1,4 +1,5 @@
 const moment = require('moment');
+const https = require('https');
 
 function getOffset(currentPage = 1, listPerPage) {
   return (currentPage - 1) * [listPerPage]
@@ -43,14 +44,15 @@ function generatePostOpt(hostname, path, port, method, ids) {
     port,
     path,
     method,
-    // url: 'https://' + hostname + ':' + port + path,
-    url: 'http://' + hostname + ':' + port + path,
+    url: 'https://h2seq.gateway' + path,
     headers: {
       'Content-Type': 'application/json',
       'User-Agent': 'Node.js',
       'Target-Node': ids.target,
-      'Source-Node': ids.source
-    }
+      'Source-Node': ids.source,
+      'Host': ids.target + '.localhost'
+    },
+    httpsAgent: new https.Agent({ rejectUnauthorized: false })
   }
   return options
 }

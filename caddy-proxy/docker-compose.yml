@@ -1,0 +1,25 @@
+# docker-compose.yml
+
+services:
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    hostname: h2seq.gateway
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - demo-net
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  demo-net:
+    external: true

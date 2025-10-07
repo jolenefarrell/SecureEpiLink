@@ -8,6 +8,7 @@ ENVS = phunode1 labnode1 labnode2
 ENV ?= phunode1
 ENV_FILE = envs/env.dev.$(ENV)
 COMPOSE_FILE = docker-compose.yml
+NETWORK_NAME = demo-net
 
 # Database credentials (for demo data seeding)
 MYSQL_PASS = dbPassword123
@@ -59,6 +60,12 @@ restart: down up
 
 # Build all environments (no demo data)
 build-all:
+	@if [ -z "$$(docker network ls -q -f name=$(NETWORK_NAME))" ]; then \
+		echo "Creating network $(NETWORK_NAME)..."; \
+		docker network create $(NETWORK_NAME); \
+	else \
+		echo "Network $(NETWORK_NAME) already exists."; \
+	fi \
 	@for e in $(ENVS); do \
 		echo "$(GREEN)[*] Building with $$e$(RESET)"; \
 		docker compose --profile $${e:0:3} --env-file $(ENV_FILES).env.dev.$$e -p $$e up --build -d; \
@@ -66,6 +73,12 @@ build-all:
 
 # Build all environments and load demo data (db records and fasta files)
 build-all-demo:
+	@if [ -z "$$(docker network ls -q -f name=$(NETWORK_NAME))" ]; then \
+		echo "Creating network $(NETWORK_NAME)..."; \
+		docker network create $(NETWORK_NAME); \
+	else \
+		echo "Network $(NETWORK_NAME) already exists."; \
+	fi
 	@for e in $(ENVS); do \
 		echo "$(GREEN)[*] Building with $$e$(RESET)"; \
 		echo "The current directory is: $$(pwd)"; \
@@ -90,5 +103,11 @@ build-all-demo:
 		echo "$(GREEN)[*] Transferring FASTA for $$e$(RESET)"; \
 		bash $(SCRIPTS)transfer_demo_fasta.sh $$e; \
 		\
-	done
+	done; \
+	echo "$(GREEN)[*] Building central Caddy proxy$(RESET)"; \
+	cd caddy-proxy && docker compose up --build -d; \
+
+	docker network connect phunode1_backend caddy; \
+	docker network connect labnode1_backend caddy; \
+	docker network connect labnode2_backend caddy; \
 

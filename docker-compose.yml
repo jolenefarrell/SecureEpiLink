@@ -17,14 +17,15 @@ services:
       - ./envs/.env.dev.${NODE_ID}
     depends_on:
       - sql
-    ports:
-      - ${SERVER_PORT}:${SERVER_PORT}
-      - ${DEBUG_PORT}:${DEBUG_PORT}
+    # ports:
+    # - ${SERVER_PORT}:${SERVER_PORT}
+    # - ${DEBUG_PORT}:${DEBUG_PORT}
     expose: 
       - ${SERVER_PORT}
       - ${DEBUG_PORT}
     networks:
       - backend
+      - demo-net
 
   sql:
     restart: on-failure
@@ -52,3 +53,5 @@ volumes:
 
 networks:
   backend:
+  demo-net:
+    external: true
