@@ -1,0 +1,30 @@
+# Define the workflow for processing HIV data using Snakemake
+# Most things are hard coded for initial testing and development purposes
+import os
+
+# Hard coded list for testing report template purposes
+FASTA_FILES = os.listdir("data/fasta/")
+
+rule all:
+  input:
+    "results/analysis/hiv/merge_output.fasta",
+    "results/analysis/hiv/hivtrace_output.json"
+
+# Merge all fasta files shared in the data/fasta directory
+rule run_merge_fasta:
+  input:
+    fasta=["data/fasta/" + f for f in FASTA_FILES if f.endswith(".fasta")]
+  output:
+    "results/analysis/hiv/merge_output.fasta"
+  shell:
+    "cat {input.fasta} >> {output}"
+
+
+# Run the HIV trace analysis tool on the merged fasta file
+rule run_hivtrace:
+  input:
+    "results/analysis/hiv/merge_output.fasta"
+  output:
+    "results/analysis/hiv/hivtrace_output.json"
+  shell:
+    "hivtrace -i {input} -a skip -g 0 -r HXB2_prrt -t .03 -s lewis -m 500 -o {output}"

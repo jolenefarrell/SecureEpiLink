@@ -1,0 +1,66 @@
+id,cluster,postcode,date_of_notification,age_at_diagnosis,place_of_birth,stage_of_infection,risk_of_exposure,testing_history,acquisition,pathogen,record_type,subtype
+LABNODE1_1,1,2198,2022-08-03,10-19,Overseas,CD4 200-349,Other,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_10,2,2329,2021-12-12,30-39,Australia,Early,Injection Drug Use,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_11,3,2269,2023-09-06,60+,Overseas,Advanced,Other,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_12,4,2116,NA,60+,Overseas,Early,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,Other
+LABNODE1_13,5,2271,2021-11-09,50-59,Overseas,Advanced,Injection Drug Use,Unknown,Australia,HIV,notification,Other
+LABNODE1_14,6,2020,2022-11-07,30-39,Australia,CD4 350-499,Unknown,Neg. or ind. ≤12 months,Australia,HIV,notification,B
+LABNODE1_15,7,2122,2023-11-08,50-59,Australia,CD4 350-499,Unknown,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_16,8,2006,2021-11-30,20-29,Australia,Advanced,Other,Neg. or ind. ≤12 months,Australia,HIV,notification,B
+LABNODE1_17,8,2295,2022-08-29,40-49,Overseas,Early,Unknown,Never tested before,Overseas,HIV,notification,CRF01_AE
+LABNODE1_18,9,2234,2023-09-22,10-19,Overseas,Advanced,Other,Neg. or ind. >12 months,Australia,HIV,notification,C
+LABNODE1_19,10,2054,2022-11-20,60+,Australia,Early,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,B
+LABNODE1_2,11,2060,2023-07-03,10-19,Overseas,CD4 500+,MSM,Neg. or ind. ≤12 months,Overseas,HIV,notification,CRF01_AE
+LABNODE1_20,12,2300,2022-08-25,20-29,Australia,Advanced,HET,Never tested before,Australia,HIV,notification,C
+LABNODE1_21,12,2231,2020-09-26,20-29,Overseas,Advanced,Unknown,Neg. or ind. >12 months,Australia,HIV,notification,Other
+LABNODE1_22,13,2586,2019-10-01,10-19,Australia,Advanced,Unknown,Neg. or ind. >12 months,Australia,HIV,notification,Recombinant
+LABNODE1_23,14,2593,2019-08-29,30-39,Overseas,Advanced,Other,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_24,15,2308,2019-11-23,10-19,Overseas,Advanced,Other,Neg. or ind. ≤12 months,Australia,HIV,notification,B
+LABNODE1_25,16,2037,2023-06-18,30-39,Overseas,Advanced,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,Other
+LABNODE1_26,17,2153,2022-07-27,40-49,Australia,Advanced,Other,Neg. or ind. ≤12 months,Australia,HIV,notification,Recombinant
+LABNODE1_27,18,2217,2022-07-10,50-59,Overseas,CD4 500+,HET,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_28,19,2092,2020-09-12,30-39,Australia,CD4 500+,HET,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_29,20,2291,2023-09-13,60+,Australia,CD4 350-499,Other,Neg. or ind. >12 months,Overseas,HIV,notification,B
+LABNODE1_3,21,2110,2023-09-27,20-29,Overseas,Early,MSM,Neg. or ind. >12 months,Australia,HIV,notification,Recombinant
+LABNODE1_30,22,2244,2020-11-02,50-59,Overseas,Advanced,Injection Drug Use,Neg. or ind. >12 months,Australia,HIV,notification,C
+LABNODE1_31,23,2199,2022-07-09,60+,Australia,Advanced,MSM,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_32,23,2107,2019-07-16,20-29,Australia,Advanced,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_33,24,2537,2023-11-15,20-29,Australia,CD4 350-499,Injection Drug Use,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_34,25,2429,2019-08-03,30-39,Overseas,Early,Unknown,Neg. or ind. ≤12 months,Australia,HIV,notification,Other
+LABNODE1_35,25,2167,2022-07-18,60+,Overseas,Advanced,MSM,Neg. or ind. ≤12 months,Overseas,HIV,notification,CRF01_AE
+LABNODE1_36,26,2101,2019-06-24,60+,Overseas,CD4 350-499,Injection Drug Use,Neg. or ind. ≤12 months,Australia,HIV,notification,Other
+LABNODE1_37,27,2502,2023-12-05,60+,Overseas,CD4 500+,Other,Unknown,Australia,HIV,notification,B
+LABNODE1_38,28,2241,2022-12-16,10-19,Overseas,Early,Other,Never tested before,Overseas,HIV,notification,CRF01_AE
+LABNODE1_39,29,2110,2021-10-02,20-29,Overseas,Early,MSM,Unknown,Australia,HIV,notification,CRF01_AE
+LABNODE1_4,21,2269,2020-10-02,30-39,Australia,Advanced,Other,Neg. or ind. ≤12 months,Overseas,HIV,notification,CRF01_AE
+LABNODE1_40,30,2550,2023-07-10,60+,Overseas,Advanced,MSM,Neg. or ind. ≤12 months,Australia,HIV,notification,B
+LABNODE1_41,31,2035,2019-06-26,10-19,Overseas,Early,Injection Drug Use,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_42,32,2523,2020-07-07,20-29,Overseas,CD4 350-499,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_43,32,2182,NA,30-39,Overseas,Advanced,Injection Drug Use,Neg. or ind. ≤12 months,Overseas,HIV,notification,CRF01_AE
+LABNODE1_44,32,2274,2022-07-26,20-29,Overseas,Advanced,MSM,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_45,32,2129,2021-11-30,20-29,Overseas,CD4 500+,Unknown,Neg. or ind. ≤12 months,Australia,HIV,notification,Recombinant
+LABNODE1_46,32,2532,2023-11-02,50-59,Overseas,CD4 350-499,Other,Neg. or ind. >12 months,Australia,HIV,notification,Recombinant
+LABNODE1_47,32,2386,2022-08-21,50-59,Overseas,Advanced,Other,Neg. or ind. >12 months,Australia,HIV,notification,Recombinant
+LABNODE1_48,32,2205,2020-09-11,40-49,Overseas,Advanced,Injection Drug Use,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_49,32,2158,2021-08-13,20-29,Overseas,Advanced,MSM,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_5,33,2105,2020-09-11,60+,Overseas,CD4 350-499,MSM,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_50,32,2099,2019-11-16,50-59,Overseas,Advanced,MSM,Neg. or ind. ≤12 months,Australia,HIV,notification,Recombinant
+LABNODE1_6,34,2526,2022-10-29,10-19,Overseas,Advanced,Other,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_7,35,2131,2020-11-23,50-59,Overseas,Advanced,Unknown,Neg. or ind. ≤12 months,Unknown,HIV,notification,Other
+LABNODE1_8,36,2103,2022-09-09,30-39,Overseas,Early,Other,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_9,2,2363,2023-09-14,50-59,Overseas,Early,Injection Drug Use,Neg. or ind. ≤12 months,Overseas,HIV,notification,B
+LABNODE1_49,37,2158,NA,20-29,Overseas,Advanced,MSM,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_42,37,2523,2020-08-27,20-29,Overseas,CD4 350-499,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_50,37,2099,2019-09-17,50-59,Overseas,Advanced,MSM,Neg. or ind. ≤12 months,Australia,HIV,notification,Recombinant
+LABNODE1_50,37,2099,2019-07-28,50-59,Overseas,Advanced,MSM,Neg. or ind. ≤12 months,Australia,HIV,notification,Recombinant
+LABNODE1_42,37,2523,2020-10-17,20-29,Overseas,CD4 350-499,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_44,37,2274,2022-10-11,20-29,Overseas,Advanced,MSM,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_48,37,2205,2020-07-19,40-49,Overseas,Advanced,Injection Drug Use,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_48,38,2205,NA,40-49,Overseas,Advanced,Injection Drug Use,Neg. or ind. >12 months,Australia,HIV,notification,B
+LABNODE1_46,38,2532,2023-07-15,50-59,Overseas,CD4 350-499,Other,Neg. or ind. >12 months,Australia,HIV,notification,Recombinant
+LABNODE1_47,38,2386,2022-11-22,50-59,Overseas,Advanced,Other,Neg. or ind. >12 months,Australia,HIV,notification,Recombinant
+LABNODE1_49,38,2158,2021-09-18,20-29,Overseas,Advanced,MSM,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_42,38,2523,2020-08-01,20-29,Overseas,CD4 350-499,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_42,38,2523,2020-11-10,20-29,Overseas,CD4 350-499,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_42,38,2523,2020-10-22,20-29,Overseas,CD4 350-499,HET,Neg. or ind. ≤12 months,Australia,HIV,notification,CRF01_AE
+LABNODE1_49,38,2158,2021-11-14,20-29,Overseas,Advanced,MSM,Neg. or ind. >12 months,Australia,HIV,notification,CRF01_AE

@@ -1,0 +1,621 @@
+---
+title: H2SEQ EXAMPLE GENOMIC ANALYSIS REPORT
+subtitle: HIV Analysis Example Report
+author: H2Seq Project
+date: today
+date-format: "MMMM D, YYYY" 
+format: 
+  html: 
+    embed-resources: true
+    toc: true
+---
+
+*** 
+
+```{python}
+#| echo: false
+# All imports
+import sys
+import os
+import networkx as nx
+import plotly.graph_objects as go
+import plotly.express as px
+import json
+import itables
+import pandas as pd
+import numpy as np
+from IPython.display import Image
+from collections import Counter, defaultdict
+from sqlalchemy import text, inspect
+from sqlalchemy.orm import Session
+import logging
+```
+
+```{python}
+#| echo: false
+#| message: false
+#| warning: false
+
+# Getting linked records and metadata from database service
+logging.disable(logging.CRITICAL)
+project_root = os.path.abspath(os.path.join(os.getcwd(), '..', '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+from app import service
+
+records_metadata = service.group_metadata_by_record()
+
+logging.disable(logging.NOTSET)
+
+```
+
+## Introduction 
+### Summary
+This report presents a simplified example of HIV genomic analysis, demonstrating the application of Quarto for the generation and visualisation of genomic data. The content herein is intended for illustrative purposes only and does not reflect actual clinical or epidemiological findings. All data, analyses, and interpretations are simulated to showcase potential reporting workflows in genomic epidemiology.
+
+### Data
+A curated simulation HIV dataset was utilised to generate this report, including both a genomic and notification records. The genomic dataset consisted of 330 previously published [1] HIV sequences downloaded from the National Center for Biotechnology Information (NCBI). Additional genomic metadata and the corresponding notification dataset was generated utilising a custom R script, guided by historical value distributions within the annual NSW HIV Strategy 2021-2025 Annual Data Report 2024 [2].
+
+*** 
+
+## Genomic analysis
+### Tools and parameters
+Following data linkage, HIV-TRACE (version 0.9.2) [3] was utilised to construct a pairwise distance matrix from HIV sequences aligned to HXB2_prrt reference sequence, with a distance threshold of 0.03. The pairwise distance matrix is then used to generate a network visualisation JSON output which defines nodes, edges and clusters.
+
+<br>
+
+### Molecular cluster network
+Interactive molecular cluster network, generated using a force-directed algorithm, that can be coloured by HIV-1 subtype, stage of infection, risk of exposure or acquisition.
+
+```{python}
+#| echo: false
+
+# # Read metadata
+# with open('./testing_metadata.json', 'r') as input_metadata_file:
+#     metadata = json.load(input_metadata_file)
+
+# md = metadata["data"]
+md = records_metadata
+
+# Read from HIVTRACE json
+with open('../../results/analysis/hiv/hivtrace_output.json', 'r') as inputfile:
+    data = json.load(inputfile)
+
+converted = {
+	"nodes" : data["trace_results"]["Nodes"]["id"],
+  "links": [
+      {"source": pair[0], "target": pair[1]} for pair in data["trace_results"]["Edges"]["sequences"]
+  ],
+  "distances": data["trace_results"]["Edges"]["length"],
+  "cluster_sizes": data["trace_results"]["Cluster sizes"]
+}
+
+links_data = {"links" : converted["links"]}
+
+node_infection_stage = {entry["external_id"]: entry["metadata"]["stage_of_infection"] for entry in md}
+node_risk = {entry["external_id"]: entry["metadata"]["risk_of_exposure"] for entry in md}
+node_subtype = {entry["external_id"]: entry["metadata"]["subtype"] for entry in md}
+node_acquisition = {entry["external_id"]: entry["metadata"]["acquisition"] for entry in md}
+
+# Color maps
+infection_labels = sorted(set(node_infection_stage.values()))
+risk_labels = sorted(set(node_risk.values()))
+subtype_labels = sorted(set(node_subtype.values()))
+acquisition_labels = sorted(set(node_acquisition.values()))
+
+infection_color_map = {label: px.colors.qualitative.Vivid[i % len(infection_labels)] for i, label in enumerate(infection_labels)}
+risk_color_map = {label: px.colors.qualitative.Vivid[i % len(risk_labels)] for i, label in enumerate(risk_labels)}
+subtype_color_map = {label: px.colors.qualitative.Vivid[i % len(subtype_labels)] for i, label in enumerate(subtype_labels)}
+acquisition_color_map = {label: px.colors.qualitative.Vivid[i % len(acquisition_labels)] for i, label in enumerate(acquisition_labels)}
+
+# Create NetworkX graph
+G = nx.Graph()
+for link in links_data["links"]:
+    G.add_edge(link["source"], link["target"])
+
+pos = nx.spring_layout(G, method="energy", seed=0)
+# pos = nx.kamada_kawai_layout(G, seed=0)
+# pos = nx.spring_layout(G, seed=0)
+
+# Background nodes to still show on isolation mode
+node_x = []
+node_y = []
+
+for node in G.nodes():
+    x, y = pos[node]
+    node_x.append(x)
+    node_y.append(y)
+
+background_node_trace = go.Scatter(
+    x=node_x,
+    y=node_y,
+    mode='markers',
+    hoverinfo='skip',
+    marker=dict(size=10, color="#aaa", line_width=0, opacity=0.8),
+    showlegend=False
+)
+
+# Edge trace
+edge_x, edge_y = [], []
+for u, v in G.edges():
+    x0, y0 = pos[u]
+    x1, y1 = pos[v]
+    edge_x.extend([x0, x1, None])
+    edge_y.extend([y0, y1, None])
+
+edge_trace = go.Scatter(
+    x=edge_x,
+    y=edge_y,
+    line=dict(width=1, color="#888"),
+    hoverinfo="none",
+    mode="lines",
+    showlegend=False
+)
+
+# Create node traces for colouring
+def create_node_traces(labels, node_attr, color_map, pos, visible):
+    traces = []
+    for label in labels:
+        nodes = [n for n in G.nodes() if node_attr.get(n) == label]
+        x_vals = [pos[n][0] for n in nodes]
+        y_vals = [pos[n][1] for n in nodes]
+        traces.append(go.Scatter(
+            x=x_vals,
+            y=y_vals,
+            mode="markers",
+            name=label,
+            hoverinfo="text",
+            hovertext=nodes,
+            marker=dict(size=10, color=color_map[label], line_width=0),
+            visible=visible
+        ))
+    return traces
+
+node_traces_infection = create_node_traces(infection_labels, node_infection_stage, infection_color_map, pos, True)
+node_traces_risk = create_node_traces(risk_labels, node_risk, risk_color_map, pos, False)
+node_traces_subtype = create_node_traces(subtype_labels, node_subtype, subtype_color_map, pos, False)
+node_traces_acquisition = create_node_traces(acquisition_labels, node_acquisition, acquisition_color_map, pos, False)
+
+# Create figure
+fig = go.Figure(
+    data= [background_node_trace] + [edge_trace] + node_traces_infection + node_traces_risk + node_traces_subtype + node_traces_acquisition
+)
+
+# Dropdown visibility masks
+vis_edge = [True]
+vis_background_nodes = [True]
+vis_infection = [True]*len(node_traces_infection) + [False]*len(node_traces_risk) + [False]*len(node_traces_subtype) + [False]*len(node_traces_acquisition)
+vis_risk = [False]*len(node_traces_infection) + [True]*len(node_traces_risk) + [False]*len(node_traces_subtype) + [False]*len(node_traces_acquisition)
+vis_subtype = [False]*len(node_traces_infection) + [False]*len(node_traces_risk) + [True]*len(node_traces_subtype) + [False]*len(node_traces_acquisition)
+vis_acquisition = [False]*len(node_traces_infection) + [False]*len(node_traces_risk) + [False]*len(node_traces_subtype) + [True]*len(node_traces_acquisition)
+
+visibility_options = {
+    "Stage of Infection": vis_edge + vis_background_nodes + vis_infection,
+    "Risk of Exposure": vis_edge + vis_background_nodes + vis_risk,
+    "Subtype": vis_edge + vis_background_nodes + vis_subtype,
+    "Acquisition": vis_edge + vis_background_nodes + vis_acquisition
+}
+
+# Generate buttons list
+buttons = []
+for label, vis in visibility_options.items():
+    buttons.append(
+        dict(
+            label=label,
+            method="update",
+            args=[
+                {"visible": vis},
+                {"title.text": f"Molecular Cluster Network – {label}"}
+            ],
+        )
+    )
+
+fig.update_layout(
+    title="Molecular Cluster Network – Stage of Infection",  # default title
+    height=800,
+    updatemenus=[
+        dict(
+            type="dropdown",
+            direction="down",
+            xanchor="center",
+            yanchor="top",
+            showactive=True,
+            x=0.88,
+            y=1.06,
+            buttons=buttons,
+        )
+    ],
+    xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, scaleanchor="y", domain=[0, 1]),
+    yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+    margin=dict(b=60, t=70),
+    hovermode='closest',
+    legend=dict(
+        orientation="h",
+        yanchor="top",
+        y=-0.03,
+        xanchor="center",
+        x=0.5,
+        bgcolor='rgba(0,0,0,0)'
+    )
+)
+
+fig.show(config={
+    "toImageButtonOptions": {
+        "format": "svg",  # instead of 'png'
+        "filename": "cluster_network_figure",
+        "height": 600,
+        "width": 800,
+        "scale": 1
+    }
+})
+
+```
+
+
+**Figure 1. Hypothetical molecular cluster network of individuals infected with HIV-1.**
+The edges represent genetic distance between nodes of less than a threshold of 0.03, and the nodes can be dynamically coloured to represent HIV-1 subtype, stage of infection, risk of exposure or acquisition.
+
+<br>
+
+**Table 1. Hypothetical molecular cluster network statistics summary.**
+
+```{python}
+#| echo: false
+
+# Network Statistics table
+itables.options.warn_on_undocumented_option=False
+itables.options.searching = False
+itables.options.paging = False
+itables.options.ordering = False
+
+network_stats = { 
+  "Network Statistics": {
+      "Clusters" : data["trace_results"]["Network Summary"]["Clusters"],
+      "Edges" : data["trace_results"]["Network Summary"]["Edges"],
+      "Nodes" : data["trace_results"]["Network Summary"]["Nodes"],
+      "Singletons" : data["trace_results"]["Network Summary"]["Singletons"]
+    }
+}
+
+df = pd.DataFrame(network_stats)
+itables.show(df)
+
+```
+
+<br>
+``` {python}
+#| echo: false
+
+# Given genetic distance array
+cluster_sizes = converted["cluster_sizes"]
+
+# Create histogram
+fig = px.histogram(
+    x=cluster_sizes,
+    marginal="rug",
+    labels={'x': 'Cluster size'}
+)
+
+# Set bin size = 1 using update_traces on histogram trace
+for trace in fig.data:
+    if trace.type == 'histogram':
+        trace.xbins = dict(
+            start=0,
+            end=max(cluster_sizes) + 1,
+            size=1
+        )
+
+fig.update_traces(marker_color='#4f1dd6')
+
+fig.update_layout(
+    yaxis_title="Frequency",
+    bargap=0.01,
+    dragmode='pan',
+    margin=dict(b=60)
+    
+)
+
+fig.show(config={
+    "toImageButtonOptions": {
+        "format": "svg",  # instead of 'png'
+        "filename": "cluster_size_dist",
+        "height": 600,
+        "width": 800,
+        "scale": 1
+    }
+})
+
+```
+
+**Figure 2. Hypothetical distribution of cluster size for all clusters within the network.**
+Each bar represents the number of sequences (nodes) observed at a given size bin.
+<br>
+
+
+``` {python}
+#| echo: false
+
+# Given genetic distance array
+distances = converted["distances"]
+
+# Plotly histogram
+bin_width = 0.001
+bins = np.arange(0, max(distances) + bin_width, bin_width)
+fig = px.histogram(x=distances, marginal="rug", labels={'x': 'Genetic Distance'})
+fig.update_layout(yaxis_title="Frequency")
+fig.update_layout(bargap=0.01)
+fig.update_layout(dragmode='pan')
+fig.update_layout(
+    margin=dict(b=60)
+)
+# fig.update_layout(xaxis=dict(range=[0, None])) 
+fig.show(config={
+    "toImageButtonOptions": {
+        "format": "svg",  # instead of 'png'
+        "filename": "genetic_distance_dist",
+        "height": 600,
+        "width": 800,
+        "scale": 1
+    }
+})
+
+```
+
+**Figure 3. Hypothetical distribution of genetic distances across for all edges within the network.**
+Each bar represents the number of links (edges) observed at a given genetic distance bin.
+
+<br>
+
+### Characteristics Distribution Explorer
+<!-- Interactive histogram showing the distribution of HIV cases by HIV-1 subtype, stage of infection, and risk exposure category. -->
+
+<!-- ```{python}
+#| echo: false
+
+characteristics = ['HIV-1 Subtype', 'Stage of Infection', 'Risk of exposure']
+
+def collect_all_values(data, field_name):
+    values = []
+    for record in data:
+        metadata = record.get("metadata", {})
+        value = metadata.get(field_name)
+        if value is not None:
+            values.append(value)
+    return values
+
+all_subtypes = collect_all_values(md, "subtype")
+all_stages = collect_all_values(md, "stage_of_infection")
+all_risks = collect_all_values(md, "risk_of_exposure")
+
+data = {
+    "HIV-1 Subtype": all_subtypes,
+    "Stage of Infection": all_stages,
+    "Risk of exposure": all_risks,
+}
+
+colours = ['#1da4d6', '#a4d61d', '#4f1dd6']
+
+# Create traces
+traces = []
+for i, ch in enumerate(characteristics):
+    traces.append(
+        go.Histogram(
+            x=data[ch],
+            name=ch,
+            visible=(ch == characteristics[0]),
+            marker_color=colours[i]
+        )
+    )
+
+# Drop down buttons
+dropdown_buttons = [
+    {
+        'label': ch,
+        'method': 'update',
+        'args': [
+            {'visible': [c == ch for c in characteristics]},
+            {
+                'title.text': f"Characteristic Distribution – {ch}",
+                'xaxis.title.text': f"{ch}"
+            }
+        ]
+    }
+    for ch in characteristics
+]
+
+fig = go.Figure(data=traces)
+fig.update_layout(
+    title=f"Characteristic Distribution – {characteristics[0]}",
+    dragmode='pan',
+    updatemenus=[{
+        'buttons': dropdown_buttons,
+        'direction': 'down',
+        'showactive': True,
+        'x': 0.88,
+        'xanchor': 'center',
+        'y': 1.15,
+        'yanchor': 'top',
+    }],
+    xaxis_title=f"{characteristics[0]}",
+    yaxis_title="Frequency",
+    bargap=0.1,
+    margin=dict(b=60, t=100),
+)
+
+fig.show()
+``` -->
+
+```{python}
+#| echo: false
+dfs = {}
+characteristics = ['Subtype', 'Stage of Infection', 'Risk of exposure', 'Acquisition']
+
+# Map display names to actual column names in data
+colnames = {
+    'Subtype': 'subtype',
+    'Stage of Infection': 'stage_of_infection',
+    'Risk of exposure': 'risk_of_exposure',
+    'Acquisition': 'acquisition'
+}
+
+# Step 1: Collect characteristic values AND date_of_collection
+def floor_to_6month(dt):
+    # Floors datetime to nearest Jan 1 or Jul 1 of the year
+    year = dt.year
+    if dt.month < 7:
+        return pd.Timestamp(year=year, month=1, day=1)
+    else:
+        return pd.Timestamp(year=year, month=7, day=1)
+
+def collect_date_and_values(data, field_name):
+    records = []
+    for record in data:
+        metadata = record.get("metadata", {})
+        value = metadata.get(field_name)
+        date_of_collection = metadata.get("date_of_collection")
+        date_parsed = pd.to_datetime(date_of_collection, dayfirst=True).floor('D')
+        records.append([date_parsed, value])
+
+    return pd.DataFrame(records, columns=['date_of_collection', field_name])
+
+# Create dataframes per characteristic with date_of_collection
+for ch in characteristics:
+    df = collect_date_and_values(md, colnames[ch])
+    dfs[ch] = df
+
+# Create dropdown traces per characteristic
+fig = go.Figure()
+trace_idx = 0
+palette = px.colors.qualitative.Prism
+
+colours = {
+    'Subtype': subtype_color_map,
+    'Stage of Infection': infection_color_map,
+    'Risk of exposure': risk_color_map,
+    'Acquisition' : acquisition_color_map
+}
+
+label_orders = {
+    'Subtype': subtype_labels,
+    'Stage of Infection': infection_labels,
+    'Risk of exposure': risk_labels,
+    'Acquisition' : acquisition_labels
+}
+
+for i, ch in enumerate(characteristics):
+    df = dfs[ch]
+    colname = colnames[ch]
+    df['date_binned'] = df['date_of_collection'].apply(floor_to_6month)
+
+    # Group by date and characteristic category and count
+    counts = df.groupby(['date_binned', colname]).size().reset_index(name='count')
+
+    # Calculate total per date for proportions
+    total_counts = counts.groupby('date_binned')['count'].transform('sum')
+    counts['proportion'] = counts['count'] / total_counts
+
+    # Pivot to wide format for stacked bars
+    pivot = counts.pivot(index='date_binned', columns=colname, values='proportion').fillna(0)
+
+    # Ensure consistent ordering
+    ordered_cols = [c for c in label_orders[ch] if c in pivot.columns]
+    pivot = pivot[ordered_cols]
+
+    try:
+        pivot.index = pivot.index.to_series().dt.strftime('%b %Y')  # e.g. "Jan 2021", "Jul 2021"
+    except Exception:
+        pivot.index = pivot.index.astype(str)
+
+    # Create traces for each category within characteristic
+    for j, category in enumerate(pivot.columns):
+        fig.add_trace(go.Bar(
+            x=pivot.index,
+            y=pivot[category],
+            name=str(category),
+            visible=(i == 0),  # only first characteristic visible initially
+            legendgroup=ch,
+            showlegend=True,
+            hovertemplate=f'{ch}: {category}<br>Date collected: %{{x}}<br>Proportion: %{{y:.2%}}<extra></extra>',
+            # marker_color=palette[j % len(palette)]
+            marker_color=colours[ch][category]
+        ))
+
+# Create dropdown buttons to toggle between characteristics
+buttons = []
+trace_idx = 0
+for i, ch in enumerate(characteristics):
+    df = dfs[ch]
+    colname = colnames[ch]
+    categories = df[colname].unique()
+    n_categories = len(categories)
+
+    visible = [False] * len(fig.data)
+    # Make visible only traces for current characteristic
+    for j in range(n_categories):
+        visible[trace_idx + j] = True
+    trace_idx += n_categories
+
+    buttons.append(dict(
+        label=ch,
+        method='update',
+        args=[{'visible': visible},
+              {'title': f'Proportional Distribution of {ch} Over Time',
+               'xaxis': {'title': 'Date Collected'},
+               'yaxis': {'title': 'Proportion', 'tickformat': '.0%'}}
+             ]
+    ))
+
+fig.update_layout(
+    barmode='stack',
+    # title=f'Proportional Distribution of {characteristics[0]} Over Time',
+    updatemenus=[dict(
+        active=0,
+        buttons=buttons,
+        direction='down',
+        x=0.9,
+        y=1.15,
+        showactive=True,
+        xanchor='center',
+        yanchor='top'
+    )],
+    yaxis=dict(tickformat='.0%'),
+    xaxis=dict(type='category', tickangle=0),
+    margin=dict(b=70, t=90),
+    legend=dict(
+        orientation="h",
+        traceorder="normal",
+        yanchor="top",
+        y=-0.05,
+        xanchor="center",
+        x=0.5,
+        bgcolor='rgba(0,0,0,0)',
+        itemclick=False,
+        itemdoubleclick=False
+    )
+)
+
+fig.show(config={
+    "toImageButtonOptions": {
+        "format": "svg",  # instead of 'png'
+        "filename": "characteristic_dist",
+        "height": 600,
+        "width": 800,
+        "scale": 1
+    }
+})
+```
+**Figure 5. Hypothetical distribution of HIV-1 subtype, stage of infection, risk of exposure and acquisition across for all edges within the network, distributed over 6 month periods.** 
+Each bar represents the number of cases observed for each category.
+
+
+```{python}
+
+```
+
+## References
+[1] Di Giallonardo, F., Pinto, A. N., Keen, P., Shaik, A., Carrera, A., Salem, H., Selvey, C., Nigro, S. J., Fraser, N., Price, K., Holden, J., Lee, F. J., Dwyer, D. E., Bavinton, B. R., Geoghegan, J. L., Grulich, A. E., Kelleher, A. D., & NSW HIV Prevention Partnership Project (2021). Subtype-specific differences in transmission cluster dynamics of HIV-1 B and CRF01_AE in New South Wales, Australia. Journal of the International AIDS Society, 24(1), e25655. https://doi.org/10.1002/jia2.25655
+
+[2] New South Wales Ministry of Health. (2024). Annual NSW HIV data report 2024. https://www.health.nsw.gov.au/endinghiv/Publications/annual-2024-nsw-hiv-data-report.pdf
+
+[3] Kosakovsky Pond, S. L., Weaver, S., Leigh Brown, A. J., & Wertheim, J. O. (2018). HIV-TRACE (Transmission Cluster Engine): a Tool for Large Scale Molecular Epidemiology of HIV-1 and Other Rapidly Evolving Pathogens. Molecular biology and evolution, 35(7), 1812–1819. https://doi.org/10.1093/molbev/msy016

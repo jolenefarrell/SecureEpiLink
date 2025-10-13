@@ -1,14 +1,19 @@
-phunode1.localhost {
+api.phunode1.localhost {
     tls internal
     reverse_proxy phunode1-api-1:3000
 }
 
-labnode1.localhost {
+pipeline.phunode1.localhost {
+    tls internal
+    reverse_proxy phunode1-pipeline-1:3008
+}
+
+api.labnode1.localhost {
     tls internal
     reverse_proxy labnode1-api-1:3001
 }
 
-labnode2.localhost {
+api.labnode2.localhost {
     tls internal
     reverse_proxy labnode2-api-1:3002
 }

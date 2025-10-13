@@ -27,6 +27,26 @@ services:
       - backend
       - demo-net
 
+  pipeline:
+    restart: on-failure
+    build:
+      context: ./demo-pipeline
+      dockerfile: Dockerfile
+    profiles: ["phu"]
+    volumes:
+      - ./demo-pipeline/app:/code/app
+      - fasta_data:/code/${FASTA_STORAGE_PATH}
+    env_file:
+      - ./envs/.env.dev.${NODE_ID}
+    depends_on:
+      - sql
+      - api
+    expose: 
+      - ${UVICORN_PORT}
+    networks:
+      - backend
+      - demo-net
+
   sql:
     restart: on-failure
     image: mysql:8.2.0

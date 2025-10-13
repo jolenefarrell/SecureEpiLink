@@ -44,7 +44,7 @@ function generatePostOpt(hostname, path, port, method, ids) {
     port,
     path,
     method,
-    url: 'https://h2seq.gateway' + path,
+    url: 'https://h2seq.gateway.api' + path,
     headers: {
       'Content-Type': 'application/json',
       'User-Agent': 'Node.js',
