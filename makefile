@@ -1,4 +1,5 @@
-# Makefile
+#!/usr/bin/make -f
+SHELL := /bin/bash
 # Makefile for building three simulated nodes
 
 # List of environments to build
@@ -32,12 +33,13 @@ help:
 	@echo "Usage: make [target] ENV=<env_name>"
 	@echo ""
 	@echo "Targets:"
-	@echo "  build       Build images for one env (default: phunode1)"
-	@echo "  build-all   Build images for ALL envs in sequence"
-	@echo "  up          Start containers for one env"
-	@echo "  down        Stop containers for one env"
-	@echo "  logs        Tail logs for one env"
-	@echo "  restart     Restart containers for one env"
+	@echo "  build							Build images for one env (default: phunode1)"
+	@echo "  build-all					Build images for ALL envs in sequence"
+	@echo "  build-all-demo			Build images for ALL envs in sequence and populate the dbs with demo data"
+	@echo "  up									Start containers for one env"
+	@echo "  down								Stop containers for one env"
+	@echo "  logs								Tail logs for one env"
+	@echo "  restart						Restart containers for one env"
 
 
 build:
