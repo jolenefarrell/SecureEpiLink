@@ -24,6 +24,12 @@ if (nodeType == NodeType.phu) { // PHU only APIs
   // router.use('/transaction', transactionRouter)
 }
 
+/**
+ * @swagger
+ * tags:
+ *   - name: Testing
+ *     description: Endpoints for testing and demo operations
+ */
 router.use('/testing', testRouter) // Testing APIs conditioning exposed within testRouter                  
 // router.use('/users', userRouter)
 

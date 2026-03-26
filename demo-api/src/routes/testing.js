@@ -22,14 +22,41 @@ const cleanphu = '../../../automation/clean_phu_node.sql'
 // }
 // router.post("/upload/single", upload.single("file"), uploadController)
 
+/**
+ * @swagger
+ * /upload/single:
+ *   post:
+ *     summary: Upload a single FASTA file
+ *     description: Upload a single FASTA file for processing and storage.
+ *     tags:
+ *       - Testing
+ */
 router.post("/upload/single", uploads.uploadFasta.single("file"), (req, res) => {
   return res.send(req.file)
 })
 
+/**
+ * @swagger
+ * /upload/multi:
+ *   post:
+ *     summary: Upload multiple FASTA files
+ *     description: Upload multiple FASTA files (up to 10) for batch processing and storage.
+ *     tags:
+ *       - Testing
+ */
 router.post("/upload/multi", uploads.uploadFasta.array("file", 10), (req, res) => {
   return res.send(req.files)
 })
 
+/**
+ * @swagger
+ * /reset:
+ *   post:
+ *     summary: Reset demo database
+ *     description: Reset the demo database to its initial state, clearing all test data on the current node.
+ *     tags:
+ *       - Testing
+ */
 router.post("/reset", async function (req, res, next) {
   try {
     const lab = await db.query(cleanlab)
@@ -53,12 +80,75 @@ if (nodeType == NodeType.phu) {
   router.post('/transaction/initiate', initiationController.initiateTransaction)
 }
 
+/**
+ * @swagger
+ * /serviceCheck:
+ *   get:
+ *     summary: Service health check
+ *     description: Check the health and availability of the service.
+ *     tags:
+ *       - Testing
+ */
 router.get('/serviceCheck', testing.serviceCheck)
+/**
+ * @swagger
+ * /config/getAll:
+ *   get:
+ *     summary: Get all config
+ *     description: Retrieve all configuration settings for the current node.
+ *     tags:
+ *       - Testing
+ */
 router.get('/config/getAll', testing.getConfig)
+/**
+ * @swagger
+ * /records/getAll:
+ *   get:
+ *     summary: Get all records
+ *     description: Retrieve all records stored on the current node.
+ *     tags:
+ *       - Testing
+ */
 router.get('/records/getAll', testing.getAllRecords)
+/**
+ * @swagger
+ * /records/getById:
+ *   get:
+ *     summary: Get records by ID
+ *     description: Retrieve records by their unique identifier on the current node.
+ *     tags:
+ *       - Testing
+ */
 router.get('/records/getById', testing.getAllRecordsById)
+/**
+ * @swagger
+ * /records/getAllFiles:
+ *   get:
+ *     summary: Get all sequence files
+ *     description: Retrieve all sequence files available on the current node.
+ *     tags:
+ *       - Testing
+ */
 router.get('/records/getAllFiles', testing.getSequenceFiles)
+/**
+ * @swagger
+ * /records/getFilesById:
+ *   get:
+ *     summary: Get sequence files by ID
+ *     description: Retrieve sequence files by their unique identifier on the current node.
+ *     tags:
+ *       - Testing
+ */
 router.get('/records/getFilesById', testing.getSequenceFilesById)
+/**
+ * @swagger
+ * /transaction/getTransaction:
+ *   get:
+ *     summary: Get transaction details
+ *     description: Retrieve details for a specific transaction on the current node.
+ *     tags:
+ *       - Testing
+ */
 router.get('/transaction/getTransaction', testing.getTransaction)
 
 module.exports = router

@@ -6,7 +6,7 @@ services:
     build:
       context: ./demo-api
       dockerfile: Dockerfile
-    profiles: ["lab", "phu"]
+    profiles: [ "lab", "phu" ]
     volumes:
       - app_data:/user/code/data
       - ./demo-api:/user/code
@@ -17,10 +17,10 @@ services:
       - ./envs/.env.dev.${NODE_ID}
     depends_on:
       - sql
-    # ports:
-    # - ${SERVER_PORT}:${SERVER_PORT}
-    # - ${DEBUG_PORT}:${DEBUG_PORT}
-    expose: 
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+      # - ${DEBUG_PORT}:${DEBUG_PORT}
+    expose:
       - ${SERVER_PORT}
       - ${DEBUG_PORT}
     networks:
@@ -32,7 +32,7 @@ services:
     build:
       context: ./demo-pipeline
       dockerfile: Dockerfile
-    profiles: ["phu"]
+    profiles: [ "phu" ]
     volumes:
       - ./demo-pipeline/app:/code/app
       - fasta_data:/code/${FASTA_STORAGE_PATH}
@@ -41,7 +41,7 @@ services:
     depends_on:
       - sql
       - api
-    expose: 
+    expose:
       - ${UVICORN_PORT}
     networks:
       - backend
@@ -50,14 +50,14 @@ services:
   sql:
     restart: on-failure
     image: mysql:8.2.0
-    profiles: ["lab", "phu"]
+    profiles: [ "lab", "phu" ]
     environment:
       MYSQL_DATABASE: h2seq
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_TCP_PORT: ${DB_PORT}
-    ports: 
+    ports:
       - ${DB_PORT}:${DB_PORT}
-    expose: 
+    expose:
       - ${DB_PORT}
     volumes:
       - ./dbinit/demo-${NODE_TYPE}-init.sql:/docker-entrypoint-initdb.d/0_init.sql
@@ -65,11 +65,12 @@ services:
     networks:
       - backend
 
-volumes: 
+volumes:
   app_data:
   fasta_data:
   record_data:
   db:
+
 
 networks:
   backend:

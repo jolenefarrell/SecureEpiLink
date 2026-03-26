@@ -1,5 +1,6 @@
 // app.js: Responsible for defining the routes, middleware and other application-level functionality
-
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsdoc = require('swagger-jsdoc');
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -14,6 +15,23 @@ app.use(bodyParser.json({ limit: '20mb' }))
 app.use(express.json()) // Recognise incoming request as JSON
 app.use(express.urlencoded({ extended: true })) // Recognise incoming request as JSON
 app.use(morganMiddleware)
+
+
+const swaggerOptions = {
+  swaggerDefinition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'API Documentation',
+      version: '0.0.1',
+      description: 'API documentation for the demo SecureEpiLink API service.',
+    },
+  },
+  apis: ['./src/routes/**/*.js'], // Path to the API docs
+};
+const swaggerDocs = swaggerJsdoc(swaggerOptions);
+console.log(JSON.stringify(swaggerDocs.paths, null, 2));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
 app.use(serverAuthMiddleware)
 app.use(require('./utils/response'))
 
