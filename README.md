@@ -74,4 +74,4 @@ Detailed user and dev guides can be found in the `docs` folder.
 
 ## License
 
-TBD
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for details.
